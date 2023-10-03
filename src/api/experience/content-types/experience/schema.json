@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company_name": {
+      "type": "string",
+      "required": true
+    },
+    "Role": {
+      "type": "string"
+    },
+    "Post_description": {
+      "type": "text"
+    },
+    "Technologie_used": {
+      "type": "richtext"
+    },
+    "Starting_date": {
+      "type": "date"
+    },
+    "Ending_date": {
+      "type": "date"
+    }
+  }
+}
