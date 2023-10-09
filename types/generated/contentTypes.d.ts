@@ -784,13 +784,27 @@ export interface ApiLanguageLanguage extends Schema.CollectionType {
     singularName: 'language';
     pluralName: 'languages';
     displayName: 'Language';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Name: Attribute.String;
-    Level: Attribute.String;
+    English: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Beginner', 'Intermediate', 'Advanced', 'Fluent']
+      >;
+    French: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Beginner', 'Intermediate', 'Advanced', 'Fluent']
+      >;
+    Spanish: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Beginner', 'Intermediate', 'Advanced', 'Fluent']
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

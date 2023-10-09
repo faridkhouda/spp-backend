@@ -4,18 +4,43 @@
   "info": {
     "singularName": "language",
     "pluralName": "languages",
-    "displayName": "Language"
+    "displayName": "Language",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
+    "English": {
+      "type": "customField",
+      "customField": "plugin::multi-select.multi-select",
+      "options": [
+        "Beginner",
+        "Intermediate",
+        "Advanced",
+        "Fluent"
+      ]
     },
-    "Level": {  
-      "type": "string"
+    "French": {
+      "type": "customField",
+      "options": [
+        "Beginner",
+        "Intermediate",
+        "Advanced",
+        "Fluent"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "Spanish": {
+      "type": "customField",
+      "options": [
+        "Beginner",
+        "Intermediate",
+        "Advanced",
+        "Fluent"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
