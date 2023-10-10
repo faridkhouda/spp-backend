@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    container_name: my-postgres-container
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      cb-net:
+        ipv4_address: 172.40.0.2
+
+networks:
+  cb-net:
+    name: cb-net
+    driver: bridge
+    ipam:
+       driver: default
+       config: 
+        - subnet: 172.40.0.0/16
+          gateway: 172.40.0.1
+
+volumes:
+  postgres_data:
