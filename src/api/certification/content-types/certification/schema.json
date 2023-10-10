@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "certifications",
+  "info": {
+    "singularName": "certification",
+    "pluralName": "certifications",
+    "displayName": "Certification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Domain": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "expiry_date": {
+      "type": "date"
+    }
+  }
+}

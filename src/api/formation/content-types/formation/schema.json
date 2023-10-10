@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formations",
+  "info": {
+    "singularName": "formation",
+    "pluralName": "formations",
+    "displayName": "Formation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Formation_name": {
+      "type": "string"
+    },
+    "Highschool_name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Starting_date": {
+      "type": "date"
+    },
+    "Ending_date": {
+      "type": "date"
+    }
+  }
+}
